@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Calendar | Quản Lý Lịch Cá Nhân</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- fullCalendar 2.2.5-->
+  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="home.html" class="logo">
+
+        <span class="logo-mini">
+            <img src="dist/img/calendar.png" alt="" width="45px" height="45px">
+          </span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg">
+          <img src="dist/img/calendar.png" alt="" width="45px" height="45px">
+          <b>Quản lý lịch</b></span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="dist/img/male-member.png" class="user-image" alt="User Image">
+                <span class="hidden-xs">Group 2</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="dist/img/male-member.png" class="img-circle" alt="User Image">
+
+                  <p>
+                    Group 2 - Web Developer
+                    <small><b>Trần Đăng Khoa</b></small>
+                  </p>
+                </li>
+
+                <!-- Menu Footer-->
+                <li class="user-footer" style="background-color:#337ab7">
+                  <div class="pull-left">
+                    <a href="myprofile.html" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="login.html" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="dist/img/male-member.png" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p>Group 2</p>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
+        </div>
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="header">MAIN NAVIGATION</li>
+          <li class="active">
+            <a href="home.html">
+              <i class="fa fa-calendar"></i> <span>Calendar</span>
+              <span class="pull-right-container">
+            </span>
+            </a>
+          </li>
+          <li>
+            <a href="myprofile.html">
+              <i class="fa fa-envelope"></i> <span>Thông Tin Cá Nhân</span>
+              <span class="pull-right-container">
+            </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          
+          <li class="active">Thông tin cá nhân</li>
+        </ol>
+      </section>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3"><h1>Thông tin cá nhân</h1></div>
+      </div>
+
+      <!-- Main content -->
+      <section class="content">
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <!-- Profile Image -->
+            <div class="box box-primary">
+              <div class="box-body box-profile">
+                <img class="profile-user-img img-responsive img-circle" src="dist/img/male-member.png" alt="User profile picture">
+                <h3 class="profile-username text-center">Trần Đăng Khoa</h3>
+
+                <p class="text-muted text-center">Người dùng</p>
+                <div class="box box-primary">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Về bản thân</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <strong><i class="fa fa-book margin-r-5"></i> Họ tên: </strong>
+                    <p class="text-muted">Trần Đăng Khoa</p>
+                    <hr>
+                    <strong><i class="fa fa-map-marker margin-r-5"></i> Địa chỉ:</strong>
+                    <p class="text-muted">Quận 9, Hồ Chí Minh</p>
+                    <hr>
+                    <strong><i class="glyphicon glyphicon-envelope margin-r-5"></i> Email:</strong>
+
+                    <p class="text-muted">13110081@student.hcmute.edu.vn</p>
+                    <hr>
+                    <strong><i class="glyphicon glyphicon-earphone margin-r-5"></i> Số điện thoại</strong>
+                    <p class="text-muted">0962228269</p>
+                    <hr>
+                    <strong><i class="fa fa-file-text-o margin-r-5"></i> Châm ngôn</strong>
+                    <p>Đếm ngày xa em</p>
+                    <a href="edit-profile.html" type="button" class="btn btn-success"><i class="fa fa-pencil fa-fw"></i> Edit</a>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+
+            <!-- About Me Box -->
+
+            <!-- /.box -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </section>
+      <!-- /.content -->
+
+    </div>
+
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.2
+      </div>
+      <strong>Copyright &copy; 2014-2016 <a href="http://www.hcmute.edu.vn">HCMUTE</a>.</strong> All rights reserved.
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery 2.2.3 -->
+  <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/app.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- fullCalendar 2.2.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+  <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+  <!-- Page specific script -->
+  <script>
+  $(function () {
+
+    /* initialize the external events
+     -----------------------------------------------------------------*/
+    function ini_events(ele) {
+      ele.each(function () {
+
+        // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+        // it doesn't need to have a start or end
+        var eventObject = {
+          title: $.trim($(this).text()) // use the element's text as the event title
+        };
+
+        // store the Event Object in the DOM element so we can get to it later
+        $(this).data('eventObject', eventObject);
+
+        // make the event draggable using jQuery UI
+        $(this).draggable({
+          zIndex: 1070,
+          revert: true, // will cause the event to go back to its
+          revertDuration: 0  //  original position after the drag
+        });
+
+      });
+    }
+
+    ini_events($('#external-events div.external-event'));
+
+    /* initialize the calendar
+     -----------------------------------------------------------------*/
+    //Date for the calendar events (dummy data)
+    var date = new Date();
+    var d = date.getDate(),
+        m = date.getMonth(),
+        y = date.getFullYear();
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today, add',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      buttonText: {
+        today: 'today',
+        add: 'Add',
+        month: 'month',
+        week: 'week',
+        day: 'day'
+      },
+      //Random default events
+      events: [
+        {
+          title: 'All Day Event',
+          start: new Date(y, m, 1),
+          backgroundColor: "#f56954", //red
+          borderColor: "#f56954" //red
+        },
+        {
+          title: 'Long Event',
+          start: new Date(y, m, d - 5),
+          end: new Date(y, m, d - 2),
+          backgroundColor: "#f39c12", //yellow
+          borderColor: "#f39c12" //yellow
+        },
+        {
+          title: 'Meeting',
+          start: new Date(y, m, d, 10, 30),
+          allDay: false,
+          backgroundColor: "#0073b7", //Blue
+          borderColor: "#0073b7" //Blue
+        },
+        {
+          title: 'Lunch',
+          start: new Date(y, m, d, 12, 0),
+          end: new Date(y, m, d, 14, 0),
+          allDay: false,
+          backgroundColor: "#00c0ef", //Info (aqua)
+          borderColor: "#00c0ef" //Info (aqua)
+        },
+        {
+          title: 'Birthday Party',
+          start: new Date(y, m, d + 1, 19, 0),
+          end: new Date(y, m, d + 1, 22, 30),
+          allDay: false,
+          backgroundColor: "#00a65a", //Success (green)
+          borderColor: "#00a65a" //Success (green)
+        },
+        {
+          title: 'Click for Google',
+          start: new Date(y, m, 28),
+          end: new Date(y, m, 29),
+          url: 'http://google.com/',
+          backgroundColor: "#3c8dbc", //Primary (light-blue)
+          borderColor: "#3c8dbc" //Primary (light-blue)
+        }
+      ],
+      editable: true,
+      droppable: true, // this allows things to be dropped onto the calendar !!!
+      drop: function (date, allDay) { // this function is called when something is dropped
+
+        // retrieve the dropped element's stored Event Object
+        var originalEventObject = $(this).data('eventObject');
+
+        // we need to copy it, so that multiple events don't have a reference to the same object
+        var copiedEventObject = $.extend({}, originalEventObject);
+
+        // assign it the date that was reported
+        copiedEventObject.start = date;
+        copiedEventObject.allDay = allDay;
+        copiedEventObject.backgroundColor = $(this).css("background-color");
+        copiedEventObject.borderColor = $(this).css("border-color");
+
+        // render the event on the calendar
+        // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+
+        // is the "remove after drop" checkbox checked?
+        if ($('#drop-remove').is(':checked')) {
+          // if so, remove the element from the "Draggable Events" list
+          $(this).remove();
+        }
+
+      }
+    });
+
+    /* ADDING EVENTS */
+    var currColor = "#3c8dbc"; //Red by default
+    //Color chooser button
+    var colorChooser = $("#color-chooser-btn");
+    $("#color-chooser > li > a").click(function (e) {
+      e.preventDefault();
+      //Save color
+      currColor = $(this).css("color");
+      //Add color effect to button
+      $('#add-new-event').css({"background-color": currColor, "border-color": currColor});
+    });
+    $("#add-new-event").click(function (e) {
+      e.preventDefault();
+      //Get value and make sure it is not null
+      var val = $("#new-event").val();
+      if (val.length == 0) {
+        return;
+      }
+
+      //Create events
+      var event = $("<div />");
+      event.css({"background-color": currColor, "border-color": currColor, "color": "#fff"}).addClass("external-event");
+      event.html(val);
+      $('#external-events').prepend(event);
+
+      //Add draggable funtionality
+      ini_events(event);
+
+      //Remove event from text input
+      $("#new-event").val("");
+    });
+  });
+</script>
+</body>
+
+</html>
